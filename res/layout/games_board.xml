@@ -1,0 +1,3434 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#E8F1D4" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="1dp" >
+
+        <RelativeLayout
+            android:id="@+id/EditLayout"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:id="@+id/TestInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Player1 DV" />
+            
+            <Button
+                android:id="@+id/TestDice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/TestInput"
+                android:text="Roll Dice" />
+                  
+            <EditText
+                android:id="@+id/TestInput2"
+                android:layout_toRightOf="@+id/TestDice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Player2 DV" />
+            
+            <Button
+                android:id="@+id/TestDice2"
+                android:layout_toRightOf="@+id/TestInput2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"            
+                android:text="Roll Dice 2" />
+            
+        </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/GameTableLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/EditLayout" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="2dp"
+                android:background="@drawable/border" >
+
+                <LinearLayout
+                    android:id="@+id/Start"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/start"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/startImage"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:background="#fff"
+                        android:src="@drawable/start" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.30"
+                        android:background="#fff"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/StartPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:id="@+id/StartPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 1st Row, 2nd Column -->
+
+                <LinearLayout
+                    android:id="@+id/Bombay"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/red"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/Price"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/BombayPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFE0"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Bombay"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/red"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/BombayH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/BombayH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/BombayH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/BombayH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.30"
+                        android:background="#FFFFE0"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/BombayFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/BombayPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/BombayPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 1st Row, 3nd Column -->
+
+                <LinearLayout
+                    android:id="@+id/GoldMine"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/Price"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/GoldMinePrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/GoldMineTitle"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/goldmine" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFE0"
+                        android:gravity="center"
+                        android:text="@string/GoldMine"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/GoldMineFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/GoldMinePlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/GoldMinePlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 1st Row, 4th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Ahmedabad"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/red"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/AhmedabadPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Ahmedabad"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/AhmedabadH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/AhmedabadH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/AhmedabadH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/AhmedabadH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="#fff"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/AhmedabadFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/AhmedabadPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/AhmedabadPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 1st Row, 5th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Railway"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/Price"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/RailwayPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/RailwayTitle"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/train" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFE0"
+                        android:gravity="center"
+                        android:text="@string/Railway"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/RailwayFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/RailwayPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/RailwayPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 1st Row, 6th Column -->
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="#fff"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/IncomeTaxTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/IncomeTax"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/IncomeTaxImage"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@color/white"
+                            android:contentDescription="@string/app_name"
+                            android:padding="2dp"
+                            android:src="@drawable/currency_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/white"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/IncomeTaxPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/IncomeTaxPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 1st Row, 7th Column -->
+
+                <LinearLayout
+                    android:id="@+id/IndoreSite"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/blue"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/IndorePrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/IndorePrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Indore"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/IndoreH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/IndoreH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/IndoreH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/IndoreH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/IndoreFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/IndorePlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/IndorePlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 1st Row, 8th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Chance"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="#fff"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/ChanceTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/Chance"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/ChanceImage"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@color/white"
+                            android:contentDescription="@string/app_name"
+                            android:padding="2dp"
+                            android:src="@drawable/chance_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/white"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/ChancePlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/ChancePlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 1st Row, 9th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Jaipur"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/blue"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/JaipurPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/JaipurPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/JaipurTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Jaipur"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/JaipurH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/JaipurH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/JaipurH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/JaipurH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/JaipurFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/JaipurPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/JaipurPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Row 2 -->
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="2dp"
+                android:background="@drawable/border" >
+
+                <LinearLayout
+                    android:id="@+id/Jail"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/JailTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/Jail"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/JailImage"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@color/white"
+                            android:contentDescription="@string/app_name"
+                            android:padding="2dp"
+                            android:src="@drawable/jail" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/white"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/JailPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/JailPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 2nd Row, 2nd Column -->
+
+                <LinearLayout
+                    android:id="@+id/Delhi"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/green"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/DelhiPrice"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/DelhiPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/DelhiTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFE0"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Delhi"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/green"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/DelhiH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/DelhiH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/DelhiH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/DelhiH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/DelhiFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/DelhiPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/DelhiPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 2nd Row, 3nd Column -->
+
+                <LinearLayout
+                    android:id="@+id/Factory"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/FactoryPrice"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/FactoryPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/FactoryTitle"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/factory" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/Factory"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/FactoryFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/FactoryPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/FactoryPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 2nd Row, 4th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Chandigarh"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/green"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/ChandigarhPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/ChandigarhPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ChandigarhTitle"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Chandigarh"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/ChandigarhH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/ChandigarhH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/ChandigarhH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/ChandigarhH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/ChandigarhFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/ChandigarhPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/ChandigarhPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 2nd Row, 5th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Bus"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/BusPrice"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/BusPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/BusLogo"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="#fff"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/bus" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/BusTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/Bus"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/BusFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/BusPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/BusPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 2nd Row, 6th Column -->
+
+                <LinearLayout
+                    android:id="@+id/CommunityChest"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/CCTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/CommunityChest"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/CCImage"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@color/white"
+                            android:contentDescription="@string/app_name"
+                            android:padding="2dp"
+                            android:src="@drawable/donate_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/white"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/CCPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/CCPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 2nd Row, 7th Column -->
+
+                <LinearLayout
+                    android:id="@+id/SimlaSite"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/orange"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/SimlaPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/SimlaPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/SimlaTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Simla"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/orange"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/SimlaH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/SimlaH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/SimlaH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/SimlaH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/SimlaFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/SimlaPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/SimlaPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 2nd Row, 8th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Amristar"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/orange"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/AmristarPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/AmristarPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/AmristarTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Amristar"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/orange"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/AmristarH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/AmristarH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/AmristarH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/AmristarH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/AmristarFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/AmristarPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/AmristarPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 2nd Row, 9th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Srinagar"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/orange"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/SrinagarPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/SrinagarPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/SrinagarTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Srinagar"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/orange"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/SrinagarH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/SrinagarH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/SrinagarH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/SrinagarH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/SrinagarFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/SrinagarPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/SrinagarPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Row 3 -->
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="2dp"
+                android:background="@drawable/border" >
+
+                <LinearLayout
+                    android:id="@+id/Club"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/ClubTitle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Club"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/ClubImage"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:background="#fff"
+                        android:src="@drawable/guest_house" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.30"
+                        android:background="#fff"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/ClubPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:id="@+id/ClubPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 2nd Column -->
+
+                <LinearLayout
+                    android:id="@+id/Agra"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/blue"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/AgraPrice"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/AgraPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/AgraTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFE0"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Agra"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/blue"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/AgraH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/AgraH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/AgraH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/AgraH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/AgraFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/AgraPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/AgraPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 3nd Column -->
+
+                <LinearLayout
+                    android:id="@+id/Chance_1"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="#fff"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/Chance1Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/Chance"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/Chance1Image"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@color/white"
+                            android:contentDescription="@string/app_name"
+                            android:padding="2dp"
+                            android:src="@drawable/chance_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/white"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/Chance_1_Player1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/Chance_1_Player2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 4th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Kanpur"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/blue"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/KanpurPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/KanpurPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/KanpurTitle"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Kanpur"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/KanpurH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/KanpurH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/KanpurH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/KanpurH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/KanpurFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/KanpurPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/KanpurPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 5th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Darjeeling"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/red"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/DarjeelingPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/DarjeelingPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/DarjeelingTitle"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Darjeeling"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/DarjeelingH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/DarjeelingH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/DarjeelingH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/DarjeelingH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/DarjeelingFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/DarjeelingPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/DarjeelingPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 6th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Kolkata"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/red"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/KolkataPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/KolkattaPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/KolkataTitle"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Kolkatta"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/KolkataH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/KolkataH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/KolkataH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/KolkataH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/KolkataFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/KolkataPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/KolkataPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 7th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Patna"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/blue"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/PatnaPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/PatnaPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/PatnaTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Patna"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/PatnaH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/PatnaH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/PatnaH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/PatnaH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/PatnaFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/PatnaPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/PatnaPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 8th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Airindia"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/AirIndiaPrice"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:padding="1dp"
+                            android:text="@string/AirindiaPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/AirIndiaLogo"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="#fff"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/airindia" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/AirIndiaTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/Airindia"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/AirindiaFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/AirindiaPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/AirindiaPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 9th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Hydreabad"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/red"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/HydreabadPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/HydreabadPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/HydreabadTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Hydreabad"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/HydreabadH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/HydreabadH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/HydreabadH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/HydreabadH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/HydreabadFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/HydreabadPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/HydreabadPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Row 4 -->
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="2dp"
+                android:background="@drawable/border" >
+
+                <LinearLayout
+                    android:id="@+id/Resthouse"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/RestHouseTitle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/RestHouse"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/RestHouseImage"
+                        android:layout_width="24dp"
+                        android:layout_height="18dp"
+                        android:background="#fff"
+                        android:src="@drawable/rest_house" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.30"
+                        android:background="#fff"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/ResHousePlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:id="@+id/ResHousePlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 2nd Column -->
+
+                <LinearLayout
+                    android:id="@+id/Chennai"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/orange"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/ChennaiPrice"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/ChennaiPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ChennaiTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFE0"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Chennai"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/orange"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/ChennaiH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/ChennaiH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/ChennaiH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/ChennaiH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/ChennaiFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/ChennaiPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/ChennaiPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 3nd Column -->
+
+                <LinearLayout
+                    android:id="@+id/CommunityChest1"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/CC1Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/CommunityChest"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/CC1Image"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@color/white"
+                            android:contentDescription="@string/app_name"
+                            android:padding="2dp"
+                            android:src="@drawable/donate_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/white"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/CC1Player1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/CC1Player2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 4th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Ooty"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/green"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/OotyPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/OotyPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/OotyTitle"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Ooty"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/OotyH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/OotyH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/OotyH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/OotyH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/OotyFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/OotyPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/OotyPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 5th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Cochin"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/green"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/CochinPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/CochinPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/CochinTitle"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Cochin"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/CochinH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/CochinH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/CochinH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/CochinH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/CochinFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/CochinPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/CochinPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 6th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Bangalore"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.10"
+                        android:background="@color/orange"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/BangalorePrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/BangalorePrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/BangaloreTitle"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Bangalore"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/orange"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/BangaloreH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/BangaloreH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/BangaloreH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/BangaloreH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/BangaloreFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/BangalorePlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/BangalorePlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 7th Column -->
+
+                <LinearLayout
+                    android:id="@+id/Shipping"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/ShippingPrice"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/ShippingPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/ShippingLogo"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="#fff"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/shipping" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ShippingTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/Shipping"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/others"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/ShippingFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/ShippingPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/ShippingPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 8th Column -->
+
+                <LinearLayout
+                    android:id="@+id/margo"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/green"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/margoPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@string/MargoPrice"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/margoTitle"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="@string/Margo"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/margoH1"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/margoH2"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/margoH3"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/house_unselect" />
+
+                        <ImageView
+                            android:id="@+id/margoH4"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="1dp"
+                            android:src="@drawable/hotel_unselect" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/margoFlag"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/margoPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/margoPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3rd Row, 9th Column -->
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="#fff"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/SalesTaxTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="1dp"
+                            android:text="@string/SalesTax"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="1dp" >
+
+                        <ImageView
+                            android:id="@+id/SalesTaxImage"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@color/white"
+                            android:contentDescription="@string/app_name"
+                            android:padding="2dp"
+                            android:src="@drawable/currency_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.30"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/SalesTaxPlayer1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+
+                        <ImageView
+                            android:id="@+id/SalesTaxPlayer2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@string/app_name"
+                            android:gravity="center"
+                            android:padding="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</ScrollView>

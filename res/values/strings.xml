@@ -1,103 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="AppName">Business Game</string>
     <string name="app_name">Business Game</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
     <string name="start">Start -></string>
-	
-	<string name="Bombay">Bombay</string>
-	<string name="BombayPrice">Rs.8,500</string>
-	
-	<string name="GoldMine">Gold</string>
-	<string name="GoldMinePrice">Rs.3,200</string>
-		
-	<string name="Railway">Railway</string>
-	<string name="RailwayPrice">Rs.9,500</string>
-	
-	<string name="Ahmedabad">Ahmedabad</string>
-	<string name="AhmedabadPrice">Rs.4,000</string>
-		
-	<string name="IncomeTax">Icome Tax</string>
-	
-	<string name="Indore">Indore</string>
-	<string name="IndorePrice">Rs.1,500</string>
-	
-	<string name="Chance">Chance</string>
-	
-	<string name="Jaipur">Jaipur</string>
-	<string name="JaipurPrice">Rs.3,000</string>
-	
-	<string name="Jail">Jail -> </string>
-	
-	<string name="Delhi">Delhi</string>
-	<string name="DelhiPrice">Rs.6,000</string>
-	
-	<string name="Chandigarh">Chandigarh</string>
-	<string name="ChandigarhPrice">Rs.2,500</string>
-	
-	<string name="Factory">Factory</string>
-	<string name="FactoryPrice">Rs.2,500</string>
-	
-	<string name="Bus">Bus</string>
-	<string name="BusPrice">Rs.3,500</string>
-	
-	<string name="Simla">Simla</string>
-	<string name="SimlaPrice">Rs.2,200</string>
-	
-	<string name="Amristar">Amristar</string>
-	<string name="AmristarPrice">Rs.3,300</string>
-	
-	<string name="CommunityChest">Service</string>
-	
-	<string name="Srinagar">Srinagar</string>
-	<string name="SrinagarPrice">Rs.5,000</string>
-	
-	<string name="Club">Club -> </string>
-	
-	<string name="Agra">Agra</string>
-	<string name="AgraPrice">Rs.2,500</string>
-	
-	<string name="Kanpur">Kanpur</string>
-	<string name="KanpurPrice">Rs.4,000</string>
-	
-	<string name="Patna">Patna</string>
-	<string name="PatnaPrice">Rs.2,000</string>
-	
-	<string name="Darjeeling">Darjeeling</string>
-	<string name="DarjeelingPrice">Rs.2,500</string>
-	
-	<string name="Airindia">Air India</string>
-	<string name="AirindiaPrice">Rs.10,500</string>
-	
-	<string name="Kolkatta">Kolkatta</string>
-	<string name="KolkattaPrice">Rs.6,500</string>
-	
-	<string name="Hydreabad">Hydreabad</string>
-	<string name="HydreabadPrice">Rs.3,500</string>
-	
-	<string name="RestHouse">Rest House -> </string>
-	
-	<string name="Chennai">Chennai</string>
-	<string name="ChennaiPrice">Rs.7,000</string>
-	
-	<string name="Bangalore">Bangalore</string>
-	<string name="BangalorePrice">Rs.4,000</string>
-	
-	<string name="SalesTax">Sales Tax</string>
-	
-	<string name="Ooty">Ooty</string>
-	<string name="OotyPrice">Rs.2,500</string>
-	
-	<string name="Cochin">Cochin</string>
-	<string name="CochinPrice">Rs.3,000</string>	
-	
-	<string name="Shipping">Shipping</string>
-	<string name="ShippingPrice">Rs.5,500</string>
-	
-	<string name="Margo">Margo</string>
-	<string name="MargoPrice">Rs.4,000</string>
-	
+    <string name="Bombay">Bombay</string>
+    <string name="BombayPrice">Rs.8,500</string>
+    <string name="GoldMine">Gold</string>
+    <string name="GoldMinePrice">Rs.3,200</string>
+    <string name="Railway">Railway</string>
+    <string name="RailwayPrice">Rs.9,500</string>
+    <string name="Ahmedabad">Ahmedabad</string>
+    <string name="AhmedabadPrice">Rs.4,000</string>
+    <string name="IncomeTax">Icome Tax</string>
+    <string name="Indore">Indore</string>
+    <string name="IndorePrice">Rs.1,500</string>
+    <string name="Chance">Chance</string>
+    <string name="Jaipur">Jaipur</string>
+    <string name="JaipurPrice">Rs.3,000</string>
+    <string name="Jail">Jail -> </string>
+    <string name="Delhi">Delhi</string>
+    <string name="DelhiPrice">Rs.6,000</string>
+    <string name="Chandigarh">Chandigarh</string>
+    <string name="ChandigarhPrice">Rs.2,500</string>
+    <string name="Factory">Factory</string>
+    <string name="FactoryPrice">Rs.2,500</string>
+    <string name="Bus">Bus</string>
+    <string name="BusPrice">Rs.3,500</string>
+    <string name="Simla">Simla</string>
+    <string name="SimlaPrice">Rs.2,200</string>
+    <string name="Amristar">Amristar</string>
+    <string name="AmristarPrice">Rs.3,300</string>
+    <string name="CommunityChest">Service</string>
+    <string name="Srinagar">Srinagar</string>
+    <string name="SrinagarPrice">Rs.5,000</string>
+    <string name="Club">Club -> </string>
+    <string name="Agra">Agra</string>
+    <string name="AgraPrice">Rs.2,500</string>
+    <string name="Kanpur">Kanpur</string>
+    <string name="KanpurPrice">Rs.4,000</string>
+    <string name="Patna">Patna</string>
+    <string name="PatnaPrice">Rs.2,000</string>
+    <string name="Darjeeling">Darjeeling</string>
+    <string name="DarjeelingPrice">Rs.2,500</string>
+    <string name="Airindia">Air India</string>
+    <string name="AirindiaPrice">Rs.10,500</string>
+    <string name="Kolkatta">Kolkatta</string>
+    <string name="KolkattaPrice">Rs.6,500</string>
+    <string name="Hydreabad">Hydreabad</string>
+    <string name="HydreabadPrice">Rs.3,500</string>
+    <string name="RestHouse">Rest House -> </string>
+    <string name="Chennai">Chennai</string>
+    <string name="ChennaiPrice">Rs.7,000</string>
+    <string name="Bangalore">Bangalore</string>
+    <string name="BangalorePrice">Rs.4,000</string>
+    <string name="SalesTax">Sales Tax</string>
+    <string name="Ooty">Ooty</string>
+    <string name="OotyPrice">Rs.2,500</string>
+    <string name="Cochin">Cochin</string>
+    <string name="CochinPrice">Rs.3,000</string>
+    <string name="Shipping">Shipping</string>
+    <string name="ShippingPrice">Rs.5,500</string>
+    <string name="Margo">Margo</string>
+    <string name="MargoPrice">Rs.4,000</string>
+    <string name="Roll">Roll</string>
 </resources>

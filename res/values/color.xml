@@ -8,4 +8,5 @@
     <color name="others">#CDC1C5</color>
     <color name="black">#000</color>
 	<color name="white">#fff</color>
+	<color name="background_color">#E8F1D4</color>
 </resources>

@@ -1,54 +1,201 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scroll"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#E8F1D4" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color"
+    android:layout_margin="1dp" >
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_margin="1dp" >
+        android:id="@+id/EditLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp" >
 
         <RelativeLayout
-            android:id="@+id/EditLayout"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_height="fill_parent">
+            android:id="@+id/Player_1_Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/Player_1_Logo"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/gold_soldier" />
+
+            <TextView
+                android:id="@+id/PlayerName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Player_1_Logo"
+                android:text="Mr. Siva Kumar"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/Cash_in_Hand1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PlayerName1"
+                android:layout_toRightOf="@+id/Player_1_Logo"
+                android:gravity="left"
+                android:padding="2dp"
+                android:text="Cash: Rs. 75,500.00"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/Player_1_Flag"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_toRightOf="@+id/Cash_in_Hand1"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/red_flag" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ManualLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/Player_2_Score"
+            android:layout_toRightOf="@+id/Player_1_Score"
+            android:gravity="center">
 
             <EditText
                 android:id="@+id/TestInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Player1 DV" />
-            
+                android:hint="P1"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
             <Button
                 android:id="@+id/TestDice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/TestInput"
-                android:text="Roll Dice" />
-                  
+                android:text="Roll1"
+                android:textSize="12dp" />
+
             <EditText
                 android:id="@+id/TestInput2"
-                android:layout_toRightOf="@+id/TestDice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Player2 DV" />
-            
+                android:layout_toRightOf="@+id/TestDice"
+                android:hint="P2"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
             <Button
                 android:id="@+id/TestDice2"
-                android:layout_toRightOf="@+id/TestInput2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"            
-                android:text="Roll Dice 2" />
-            
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/TestInput2"
+                android:text="Roll2"
+                android:textSize="12dp" />
         </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/DiceLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/Player_2_Score"
+            android:layout_toRightOf="@+id/Player_1_Score"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/PlayerDie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Roll" >
+
+                <ImageView
+                    android:id="@+id/die1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/d6" />
+
+                <Button
+                    android:id="@+id/Roll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/status_lq_green"
+                    android:gravity="center"
+                    android:text="@string/Roll"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/die2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_toRightOf="@+id/Roll"
+                    android:src="@drawable/d6" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Player_2_Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/Player_2_Logo"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/black_soldier" />
+
+            <TextView
+                android:id="@+id/PlayerName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Player_2_Logo"
+                android:text="Mr. Kalanithi Maran"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/Cash_in_Hand2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PlayerName2"
+                android:layout_toRightOf="@+id/Player_2_Logo"
+                android:gravity="left"
+                android:padding="2dp"
+                android:text="Cash: Rs. 75,500.00"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/Player_2_Flag"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_toRightOf="@+id/Cash_in_Hand2"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/green_flag" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:layout_below="@+id/EditLayout">
 
         <TableLayout
             android:id="@+id/GameTableLayout"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:layout_below="@+id/EditLayout" >
+            android:layout_alignParentLeft="true"
+            android:fitsSystemWindows="true"
+            android:stretchColumns="*" >
 
             <TableRow
                 android:id="@+id/tableRow1"
@@ -3430,5 +3577,5 @@
                 </LinearLayout>
             </TableRow>
         </TableLayout>
-    </RelativeLayout>
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>
